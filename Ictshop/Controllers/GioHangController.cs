@@ -108,6 +108,7 @@ namespace Ictshop.Controllers
             }
             List<GioHang> lstGioHang = LayGioHang();
             return View(lstGioHang);
+            // Data Source=DESKTOP-G3N8SSK\HCPC1908;Initial Catalog=master;Integrated Security=True
         }
         //Tính tổng số lượng và tổng tiền
         //Tính tổng số lượng
@@ -137,7 +138,7 @@ namespace Ictshop.Controllers
         {
             if (TongSoLuong() == 0)
             {
-                return PartialView();
+                ViewBag.TongSoLuong = 0;
             }
             ViewBag.TongSoLuong = TongSoLuong();
             ViewBag.TongTien = TongTien();
