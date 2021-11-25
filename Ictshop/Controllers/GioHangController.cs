@@ -9,7 +9,7 @@ namespace Ictshop.Controllers
 {
     public class GioHangController : Controller
     {
-        Qlbanhang db = new Qlbanhang();
+        LaptopStoreManegement db = new LaptopStoreManegement();
         // GET: GioHang
         
         //Lấy giỏ hàng 

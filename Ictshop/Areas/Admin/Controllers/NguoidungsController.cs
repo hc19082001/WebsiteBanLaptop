@@ -12,7 +12,7 @@ namespace Ictshop.Areas.Admin.Controllers
 {
     public class NguoidungsController : Controller
     {
-        private Qlbanhang db = new Qlbanhang();
+        private LaptopStoreManegement db = new LaptopStoreManegement();
 
         // Xem quản lý tất cả người dùng
         // GET: Admin/Nguoidungs

@@ -12,7 +12,7 @@ namespace Ictshop.Controllers
 {
     public class DonhangsController : Controller
     {
-        private Qlbanhang db = new Qlbanhang();
+        private LaptopStoreManegement db = new LaptopStoreManegement();
 
         // GET: Donhangs
         // Hiển thị danh sách đơn hàng
