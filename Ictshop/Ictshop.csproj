@@ -255,10 +255,13 @@
     <Content Include="HinhanhSP\baner-chinh-ultra.png" />
     <Content Include="HinhanhSP\BANNERCUOI.jpg" />
     <Content Include="HinhanhSP\BANNERSP.png" />
+    <Content Include="HinhanhSP\GS75-Stealth-2.jpg" />
+    <Content Include="HinhanhSP\HP Pavilion 15_.jpg" />
     <Content Include="HinhanhSP\HP-14S.jpg" />
     <Content Include="HinhanhSP\HP-340S.jpg" />
     <Content Include="HinhanhSP\HP-ENVY.jpg" />
     <Content Include="HinhanhSP\HP-PAVILION.jpg" />
+    <Content Include="HinhanhSP\HP-Victus.jpg" />
     <Content Include="HinhanhSP\LOGO.png" />
     <Content Include="HinhanhSP\ban1.jpg" />
     <Content Include="HinhanhSP\ban2.jpg" />
