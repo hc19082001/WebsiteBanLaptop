@@ -255,10 +255,20 @@
     <Content Include="HinhanhSP\baner-chinh-ultra.png" />
     <Content Include="HinhanhSP\BANNERCUOI.jpg" />
     <Content Include="HinhanhSP\BANNERSP.png" />
+    <Content Include="HinhanhSP\MSI-Creator.jpg" />
+    <Content Include="HinhanhSP\MSI-GF63.jpg" />
+    <Content Include="HinhanhSP\MSI-GS66.png" />
+    <Content Include="HinhanhSP\MSI-GS76.jpg" />
+    <Content Include="HinhanhSP\MSI-Modern.jpg" />
+    <Content Include="HinhanhSP\MSI-Prestige..png" />
+    <Content Include="HinhanhSP\MSIGS75Stealth.jpg" />
+    <Content Include="HinhanhSP\HPPVLGM.jpg" />
     <Content Include="HinhanhSP\HP-14S.jpg" />
     <Content Include="HinhanhSP\HP-340S.jpg" />
     <Content Include="HinhanhSP\HP-ENVY.jpg" />
     <Content Include="HinhanhSP\HP-PAVILION.jpg" />
+    <Content Include="HinhanhSP\hp-pivilion-gaming-15.jpg" />
+    <Content Include="HinhanhSP\HP-Victus.jpg" />
     <Content Include="HinhanhSP\LOGO.png" />
     <Content Include="HinhanhSP\ban1.jpg" />
     <Content Include="HinhanhSP\ban2.jpg" />
@@ -402,6 +412,7 @@
     <Content Include="Views\Sanpham\lapASUSpartial.cshtml" />
     <Content Include="Views\Sanpham\lapMACBOOKpartial.cshtml" />
     <Content Include="Views\TEST\Index.cshtml" />
+    <Content Include="Views\Sanpham\lapMSIpartial.cshtml" />
     <None Include="Web.Debug.Config">
       <DependentUpon>Web.Config</DependentUpon>
     </None>
