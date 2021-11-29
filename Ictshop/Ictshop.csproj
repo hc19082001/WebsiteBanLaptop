@@ -145,6 +145,7 @@
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SanphamController.cs" />
+    <Compile Include="Controllers\TESTController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -250,6 +251,8 @@
     <Content Include="HinhanhSP\ASUS-E210MA.jpg" />
     <Content Include="HinhanhSP\ASUS-X409FJ.jpg" />
     <Content Include="HinhanhSP\ASUS-X501A.jpg" />
+    <Content Include="HinhanhSP\ban3.jpg" />
+    <Content Include="HinhanhSP\baner-chinh-ultra.png" />
     <Content Include="HinhanhSP\HP-14S.jpg" />
     <Content Include="HinhanhSP\HP-340S.jpg" />
     <Content Include="HinhanhSP\HP-ENVY.jpg" />
@@ -263,9 +266,13 @@
     <Content Include="HinhanhSP\MACBOOK-MVFM.jpg" />
     <Content Include="HinhanhSP\MACBOOK-MXK6.jpg" />
     <Content Include="HinhanhSP\qc3.gif" />
+    <Content Include="HinhanhSP\qc4.jpg" />
     <Content Include="HinhanhSP\spnb1.png" />
     <Content Include="HinhanhSP\spnb2.png" />
     <Content Include="HinhanhSP\spnb3.png" />
+    <Content Include="HinhanhSP\spnb4.jpg" />
+    <Content Include="HinhanhSP\spnb5.png" />
+    <Content Include="HinhanhSP\spnb6.jpg" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -392,6 +399,7 @@
     <Content Include="Views\Sanpham\lapHPpartial.cshtml" />
     <Content Include="Views\Sanpham\lapASUSpartial.cshtml" />
     <Content Include="Views\Sanpham\lapMACBOOKpartial.cshtml" />
+    <Content Include="Views\TEST\Index.cshtml" />
     <None Include="Web.Debug.Config">
       <DependentUpon>Web.Config</DependentUpon>
     </None>
