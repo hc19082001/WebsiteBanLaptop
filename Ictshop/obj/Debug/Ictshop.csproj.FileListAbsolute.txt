@@ -505,3 +505,4 @@ D:\studying\Nam3\Cong nghe web\websitebanlaptop2\Ictshop\obj\Debug\Ictshop.cspro
 D:\studying\Nam3\Cong nghe web\websitebanlaptop2\Ictshop\obj\Debug\Ictshop.csproj.CopyComplete
 D:\studying\Nam3\Cong nghe web\websitebanlaptop2\Ictshop\obj\Debug\Ictshop.dll
 D:\studying\Nam3\Cong nghe web\websitebanlaptop2\Ictshop\obj\Debug\Ictshop.pdb
+D:\Công nghệ WEB\ictshop_aspnet\Ictshop\obj\Debug\Ictshop.csproj.CopyComplete
