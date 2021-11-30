@@ -505,4 +505,7 @@ D:\studying\Nam3\Cong nghe web\websitebanlaptop2\Ictshop\obj\Debug\Ictshop.cspro
 D:\studying\Nam3\Cong nghe web\websitebanlaptop2\Ictshop\obj\Debug\Ictshop.csproj.CopyComplete
 D:\studying\Nam3\Cong nghe web\websitebanlaptop2\Ictshop\obj\Debug\Ictshop.dll
 D:\studying\Nam3\Cong nghe web\websitebanlaptop2\Ictshop\obj\Debug\Ictshop.pdb
+<<<<<<< HEAD
 D:\Công nghệ WEB\ictshop_aspnet\Ictshop\obj\Debug\Ictshop.csproj.CopyComplete
+=======
+>>>>>>> a691d29fbee1713a43674ac7c9a1a8f563d1faad
