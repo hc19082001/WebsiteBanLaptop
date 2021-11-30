@@ -34,5 +34,6 @@ namespace Ictshop.Controllers
             return PartialView();
 
         }
+
     }
 }
