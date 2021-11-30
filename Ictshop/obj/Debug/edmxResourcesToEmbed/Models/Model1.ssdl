@@ -34,6 +34,13 @@
     <Property Name="Mahdh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Tenhdh" Type="nchar" MaxLength="10" />
   </EntityType>
+  <EntityType Name="Loai">
+    <Key>
+      <PropertyRef Name="Maloai" />
+    </Key>
+    <Property Name="Maloai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLoai" Type="nvarchar" MaxLength="20" />
+  </EntityType>
   <EntityType Name="Nguoidung">
     <Key>
       <PropertyRef Name="MaNguoiDung" />
@@ -68,6 +75,7 @@
     <Property Name="Anhbia" Type="nvarchar" MaxLength="20" />
     <Property Name="Mahang" Type="int" />
     <Property Name="Mahdh" Type="int" />
+    <Property Name="Maloai" Type="int" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -156,6 +164,7 @@
     <EntitySet Name="Donhang" EntityType="Self.Donhang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Hangsanxuat" EntityType="Self.Hangsanxuat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Hedieuhanh" EntityType="Self.Hedieuhanh" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loai" EntityType="Self.Loai" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Nguoidung" EntityType="Self.Nguoidung" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PhanQuyen" EntityType="Self.PhanQuyen" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Sanpham" EntityType="Self.Sanpham" Schema="dbo" store:Type="Tables" />

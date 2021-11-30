@@ -38,6 +38,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Loais">
+      <EntityTypeMapping TypeName="LaptopStoreModel.Loai">
+        <MappingFragment StoreEntitySet="Loai">
+          <ScalarProperty Name="Maloai" ColumnName="Maloai" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Nguoidungs">
       <EntityTypeMapping TypeName="LaptopStoreModel.Nguoidung">
         <MappingFragment StoreEntitySet="Nguoidung">
@@ -73,6 +81,7 @@
           <ScalarProperty Name="Anhbia" ColumnName="Anhbia" />
           <ScalarProperty Name="Mahang" ColumnName="Mahang" />
           <ScalarProperty Name="Mahdh" ColumnName="Mahdh" />
+          <ScalarProperty Name="Maloai" ColumnName="Maloai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
