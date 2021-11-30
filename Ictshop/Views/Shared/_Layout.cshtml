@@ -20,12 +20,11 @@
             background-color:#F0F0F0;
         }
         .navbar-inverse {
-            background-color: #39B54A;
-            border-color: #39B54A;
+            background-color: #ff6a00;
+            border-color: #ff6a00;
         }
-
         .top_header {
-            background-color: black;
+            background-color: darkslategrey;
             padding-left: 110px;
             color: white;
         }
@@ -115,7 +114,6 @@
                 }
             }
 
-
             </div>
 
         </div>
@@ -180,15 +178,21 @@
 
         </div>
         </div>
-
-
     <br>
 
     <div class="container body-content">
+
+
+
+
         @RenderBody()
+
+
         <hr />
         <div>
-            <img class="img-responsive" src="~/HinhanhSP/ban2.jpg" />
+            @*<img class="img-responsive" src="~/HinhanhSP/ban2.jpg" />*@
+            @*<img class="img-responsive" src="~/HinhanhSP/baner-chinh-ultra.png" />*@
+            <img class="img-responsive" src="~/HinhanhSP/BANNERCUOI.jpg" />
         </div>
         <br />
     </div>  
@@ -239,10 +243,8 @@
                 </div>
             </div>
             <hr />
-            <center> <p class="bg-primary">&copy; @DateTime.Now.Year - CườngIT</p></center>
+            <center> <p class="bg-primary">&copy; @DateTime.Now.Year - WELCOME TO LAP 555</p></center>
         </footer>
- 
-
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

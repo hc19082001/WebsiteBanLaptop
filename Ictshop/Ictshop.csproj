@@ -145,6 +145,7 @@
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SanphamController.cs" />
+    <Compile Include="Controllers\TESTController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -154,17 +155,47 @@
       <DependentUpon>202107271655114_AddThanhtien.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Chitietdonhang.cs" />
-    <Compile Include="Models\Donhang.cs" />
+    <Compile Include="Models\Chitietdonhang.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Donhang.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\GioHang.cs" />
-    <Compile Include="Models\Hangsanxuat.cs" />
-    <Compile Include="Models\Hedieuhanh.cs" />
+    <Compile Include="Models\Hangsanxuat.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hedieuhanh.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\LoginModel.cs" />
-    <Compile Include="Models\Nguoidung.cs" />
-    <Compile Include="Models\PhanQuyen.cs" />
-    <Compile Include="Models\Qlbanhang.cs" />
-    <Compile Include="Models\Sanpham.cs" />
-    <Compile Include="Models\sysdiagrams.cs" />
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Nguoidung.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PhanQuyen.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sanpham.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -216,25 +247,54 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HinhanhSP\ASUS-A515EA.jpg" />
+    <Content Include="HinhanhSP\ASUS-E210MA.jpg" />
+    <Content Include="HinhanhSP\ASUS-X409FJ.jpg" />
+    <Content Include="HinhanhSP\ASUS-X501A.jpg" />
+    <Content Include="HinhanhSP\ban3.jpg" />
+    <Content Include="HinhanhSP\baner-chinh-ultra.png" />
+    <Content Include="HinhanhSP\BANNERCUOI.jpg" />
+    <Content Include="HinhanhSP\BANNERSP.png" />
+    <Content Include="HinhanhSP\MSI-Creator.jpg" />
+    <Content Include="HinhanhSP\MSI-GF63.jpg" />
+    <Content Include="HinhanhSP\MSI-GS66.png" />
+    <Content Include="HinhanhSP\MSI-GS76.jpg" />
+    <Content Include="HinhanhSP\MSI-Modern.jpg" />
+    <Content Include="HinhanhSP\MSI-Prestige..png" />
+    <Content Include="HinhanhSP\MSIGS75Stealth.jpg" />
+    <Content Include="HinhanhSP\HPPVLGM.jpg" />
+    <Content Include="HinhanhSP\HP-14S.jpg" />
+    <Content Include="HinhanhSP\HP-340S.jpg" />
+    <Content Include="HinhanhSP\HP-ENVY.jpg" />
+    <Content Include="HinhanhSP\HP-PAVILION.jpg" />
+    <Content Include="HinhanhSP\hp-pivilion-gaming-15.jpg" />
+    <Content Include="HinhanhSP\HP-Victus.jpg" />
     <Content Include="HinhanhSP\LOGO.png" />
     <Content Include="HinhanhSP\ban1.jpg" />
     <Content Include="HinhanhSP\ban2.jpg" />
     <Content Include="HinhanhSP\banner.png" />
-    <Content Include="HinhanhSP\ip3.jpg" />
-    <Content Include="HinhanhSP\ip4.jpg" />
-    <Content Include="HinhanhSP\ip5.jpg" />
-    <Content Include="HinhanhSP\ip6.jpg" />
-    <Content Include="HinhanhSP\ip7.jpg" />
-    <Content Include="HinhanhSP\logo1.jpg" />
+    <Content Include="HinhanhSP\MACBOOK-14M1.jpg" />
+    <Content Include="HinhanhSP\MACBOOK-AIRM1.jpg" />
+    <Content Include="HinhanhSP\MACBOOK-MVFM.jpg" />
+    <Content Include="HinhanhSP\MACBOOK-MXK6.jpg" />
     <Content Include="HinhanhSP\qc3.gif" />
+    <Content Include="HinhanhSP\qc4.jpg" />
     <Content Include="HinhanhSP\spnb1.png" />
     <Content Include="HinhanhSP\spnb2.png" />
     <Content Include="HinhanhSP\spnb3.png" />
-    <Content Include="HinhanhSP\ss1.jpg" />
-    <Content Include="HinhanhSP\ss2.jpg" />
-    <Content Include="HinhanhSP\ss3.jpg" />
-    <Content Include="HinhanhSP\ss4.jpg" />
-    <Content Include="HinhanhSP\ss5.jpg" />
+    <Content Include="HinhanhSP\spnb4.jpg" />
+    <Content Include="HinhanhSP\spnb5.png" />
+    <Content Include="HinhanhSP\spnb6.jpg" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
@@ -309,6 +369,13 @@
     <Content Include="Areas\Admin\Views\PhanQuyens\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\PhanQuyens\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -329,11 +396,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Sanpham\dtiphonePartial.cshtml" />
-    <Content Include="Views\Sanpham\dtsamsungpartial.cshtml" />
     <Content Include="Views\Danhmuc\DanhmucPartial.cshtml" />
     <Content Include="Views\Home\SlidePartial.cshtml" />
-    <Content Include="Views\Sanpham\dtxiaomipartial.cshtml" />
     <Content Include="Views\Sanpham\xemchitiet.cshtml" />
     <Content Include="Views\User\Dangky.cshtml" />
     <Content Include="Views\User\Dangnhap.cshtml" />
@@ -344,6 +408,11 @@
     <Content Include="Web.Config" />
     <Content Include="Views\Donhangs\Details.cshtml" />
     <Content Include="Views\Donhangs\Index.cshtml" />
+    <Content Include="Views\Sanpham\lapHPpartial.cshtml" />
+    <Content Include="Views\Sanpham\lapASUSpartial.cshtml" />
+    <Content Include="Views\Sanpham\lapMACBOOKpartial.cshtml" />
+    <Content Include="Views\TEST\Index.cshtml" />
+    <Content Include="Views\Sanpham\lapMSIpartial.cshtml" />
     <None Include="Web.Debug.Config">
       <DependentUpon>Web.Config</DependentUpon>
     </None>

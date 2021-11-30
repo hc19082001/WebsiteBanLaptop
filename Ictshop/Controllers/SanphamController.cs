@@ -9,24 +9,42 @@ namespace Ictshop.Controllers
 {
     public class SanphamController : Controller
     {
-        Qlbanhang db = new Qlbanhang();
+        LaptopStoreManegement db = new LaptopStoreManegement();
 
         // GET: Sanpham
-        public ActionResult dtiphonepartial()
+        public ActionResult lapHPpartial()
         {
-            var ip = db.Sanphams.Where(n=>n.Mahang==2).Take(4).ToList();
-           return PartialView(ip);
+            var hp = db.Sanphams.Where(n=>n.Mahang==2).Take(8).ToList();
+           return PartialView(hp);
         }
-        public ActionResult dtsamsungpartial()
+        public ActionResult lapASUSpartial()
         {
-            var ss = db.Sanphams.Where(n => n.Mahang == 1).Take(4).ToList();
-            return PartialView(ss);
+            var asus = db.Sanphams.Where(n => n.Mahang == 6).Take(8).ToList();
+            return PartialView(asus);
         }
-        public ActionResult dtxiaomipartial()
+        public ActionResult lapMACBOOKpartial()
         {
-            var mi = db.Sanphams.Where(n => n.Mahang == 3).Take(4).ToList();
-            return PartialView(mi);
+            var mac = db.Sanphams.Where(n => n.Mahang == 8).Take(8).ToList();
+            return PartialView(mac);
         }
+
+        public ActionResult lapMSIpartial()
+        {
+            var msi = db.Sanphams.Where(n => n.Mahang == 7).Take(8).ToList();
+            return PartialView(msi);
+        }
+
+        public ActionResult lapAcerpartial()
+        {
+            var acer = db.Sanphams.Where(n => n.Mahang == 10).Take(8).ToList();
+            return PartialView(acer);
+        }
+        public ActionResult lapSamSungpartial()
+        {
+            var samsung = db.Sanphams.Where(n => n.Mahang == 11).Take(8).ToList();
+            return PartialView(samsung);
+        }
+
         //public ActionResult dttheohang()
         //{
         //    var mi = db.Sanphams.Where(n => n.Mahang == 5).Take(4).ToList();

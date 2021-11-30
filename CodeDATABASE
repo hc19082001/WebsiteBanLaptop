@@ -1,0 +1,240 @@
+USE [LaptopStore]
+GO
+/****** Object:  Table [dbo].[Chitietdonhang]    Script Date: 11/25/2021 9:57:34 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Chitietdonhang](
+	[Madon] [int] NOT NULL,
+	[Masp] [int] NOT NULL,
+	[Soluong] [int] NULL,
+	[Dongia] [decimal](18, 0) NULL,
+	[Thanhtien] [decimal](18, 0) NULL,
+ CONSTRAINT [PK_Chitietdonhang] PRIMARY KEY CLUSTERED 
+(
+	[Madon] ASC,
+	[Masp] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Donhang]    Script Date: 11/25/2021 9:57:34 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Donhang](
+	[Madon] [int] IDENTITY(1,1) NOT NULL,
+	[Ngaydat] [datetime] NULL,
+	[Tinhtrang] [int] NULL,
+	[MaNguoidung] [int] NULL,
+ CONSTRAINT [PK_Donhang] PRIMARY KEY CLUSTERED 
+(
+	[Madon] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Hangsanxuat]    Script Date: 11/25/2021 9:57:34 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Hangsanxuat](
+	[Mahang] [int] IDENTITY(1,1) NOT NULL,
+	[Tenhang] [nchar](10) NULL,
+ CONSTRAINT [PK_Hangsanxuat] PRIMARY KEY CLUSTERED 
+(
+	[Mahang] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Hedieuhanh]    Script Date: 11/25/2021 9:57:34 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Hedieuhanh](
+	[Mahdh] [int] IDENTITY(1,1) NOT NULL,
+	[Tenhdh] [nchar](10) NULL,
+ CONSTRAINT [PK_Hedieuhanh] PRIMARY KEY CLUSTERED 
+(
+	[Mahdh] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Nguoidung]    Script Date: 11/25/2021 9:57:34 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Nguoidung](
+	[MaNguoiDung] [int] IDENTITY(1,1) NOT NULL,
+	[Hoten] [nvarchar](50) NULL,
+	[Email] [nvarchar](50) NULL,
+	[Dienthoai] [nchar](10) NULL,
+	[Matkhau] [varchar](50) NULL,
+	[IDQuyen] [int] NULL,
+	[Diachi] [nvarchar](100) NULL,
+ CONSTRAINT [PK_Khachhang] PRIMARY KEY CLUSTERED 
+(
+	[MaNguoiDung] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[PhanQuyen]    Script Date: 11/25/2021 9:57:34 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PhanQuyen](
+	[IDQuyen] [int] IDENTITY(1,1) NOT NULL,
+	[TenQuyen] [nvarchar](20) NULL,
+ CONSTRAINT [PK_PhanQuyen] PRIMARY KEY CLUSTERED 
+(
+	[IDQuyen] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Sanpham]    Script Date: 11/25/2021 9:57:34 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Sanpham](
+	[Masp] [int] IDENTITY(1,1) NOT NULL,
+	[Tensp] [nvarchar](50) NULL,
+	[Giatien] [decimal](18, 0) NULL,
+	[Soluong] [int] NULL,
+	[Mota] [ntext] NULL,
+	[Bonhotrong] [int] NULL,
+	[Sanphammoi] [bit] NULL,
+	[Ram] [int] NULL,
+	[Anhbia] [nvarchar](20) NULL,
+	[Mahang] [int] NULL,
+	[Mahdh] [int] NULL,
+ CONSTRAINT [PK_Sanpham] PRIMARY KEY CLUSTERED 
+(
+	[Masp] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+INSERT [dbo].[Chitietdonhang] ([Madon], [Masp], [Soluong], [Dongia], [Thanhtien]) VALUES (13, 2, 2, CAST(2000000 AS Decimal(18, 0)), CAST(4000000 AS Decimal(18, 0)))
+GO
+INSERT [dbo].[Chitietdonhang] ([Madon], [Masp], [Soluong], [Dongia], [Thanhtien]) VALUES (13, 10, 1, CAST(2000000 AS Decimal(18, 0)), CAST(2000000 AS Decimal(18, 0)))
+GO
+INSERT [dbo].[Chitietdonhang] ([Madon], [Masp], [Soluong], [Dongia], [Thanhtien]) VALUES (14, 14, 1, CAST(2000000 AS Decimal(18, 0)), CAST(2000000 AS Decimal(18, 0)))
+GO
+INSERT [dbo].[Chitietdonhang] ([Madon], [Masp], [Soluong], [Dongia], [Thanhtien]) VALUES (14, 16, 1, CAST(200000 AS Decimal(18, 0)), CAST(200000 AS Decimal(18, 0)))
+GO
+SET IDENTITY_INSERT [dbo].[Donhang] ON 
+GO
+INSERT [dbo].[Donhang] ([Madon], [Ngaydat], [Tinhtrang], [MaNguoidung]) VALUES (13, CAST(N'2021-07-28T00:10:53.090' AS DateTime), NULL, 16)
+GO
+INSERT [dbo].[Donhang] ([Madon], [Ngaydat], [Tinhtrang], [MaNguoidung]) VALUES (14, CAST(N'2021-07-28T00:11:27.207' AS DateTime), NULL, 16)
+GO
+INSERT [dbo].[Donhang] ([Madon], [Ngaydat], [Tinhtrang], [MaNguoidung]) VALUES (15, CAST(N'2021-07-29T09:34:27.573' AS DateTime), NULL, 16)
+GO
+SET IDENTITY_INSERT [dbo].[Donhang] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Hangsanxuat] ON 
+GO
+INSERT [dbo].[Hangsanxuat] ([Mahang], [Tenhang]) VALUES (2, N'HP        ')
+GO
+INSERT [dbo].[Hangsanxuat] ([Mahang], [Tenhang]) VALUES (6, N'ASUS      ')
+GO
+INSERT [dbo].[Hangsanxuat] ([Mahang], [Tenhang]) VALUES (7, N'MSI       ')
+GO
+INSERT [dbo].[Hangsanxuat] ([Mahang], [Tenhang]) VALUES (8, N'Apple     ')
+GO
+INSERT [dbo].[Hangsanxuat] ([Mahang], [Tenhang]) VALUES (9, N'Lenovo    ')
+GO
+SET IDENTITY_INSERT [dbo].[Hangsanxuat] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Hedieuhanh] ON 
+GO
+INSERT [dbo].[Hedieuhanh] ([Mahdh], [Tenhdh]) VALUES (2, N'Apple OS  ')
+GO
+INSERT [dbo].[Hedieuhanh] ([Mahdh], [Tenhdh]) VALUES (4, N'Window    ')
+GO
+INSERT [dbo].[Hedieuhanh] ([Mahdh], [Tenhdh]) VALUES (5, N'Linux     ')
+GO
+SET IDENTITY_INSERT [dbo].[Hedieuhanh] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Nguoidung] ON 
+GO
+INSERT [dbo].[Nguoidung] ([MaNguoiDung], [Hoten], [Email], [Dienthoai], [Matkhau], [IDQuyen], [Diachi]) VALUES (14, N'Nguyen van Cuong', N'Admin@gmail.com', N'0812883636', N'12345678', 2, NULL)
+GO
+INSERT [dbo].[Nguoidung] ([MaNguoiDung], [Hoten], [Email], [Dienthoai], [Matkhau], [IDQuyen], [Diachi]) VALUES (15, N'Nguyen van Cuong', N'cuongtest@gmail.com', N'0812883636', N'12345678', NULL, NULL)
+GO
+INSERT [dbo].[Nguoidung] ([MaNguoiDung], [Hoten], [Email], [Dienthoai], [Matkhau], [IDQuyen], [Diachi]) VALUES (16, N'Cường 123', N'Khach@gmail.com', N'0812883636', N'12345678', NULL, NULL)
+GO
+SET IDENTITY_INSERT [dbo].[Nguoidung] OFF
+GO
+SET IDENTITY_INSERT [dbo].[PhanQuyen] ON 
+GO
+INSERT [dbo].[PhanQuyen] ([IDQuyen], [TenQuyen]) VALUES (1, N'Member')
+GO
+INSERT [dbo].[PhanQuyen] ([IDQuyen], [TenQuyen]) VALUES (2, N'Admin')
+GO
+SET IDENTITY_INSERT [dbo].[PhanQuyen] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Sanpham] ON 
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (2, N'Laptop HP 1', CAST(2000000 AS Decimal(18, 0)), 9, N'Apple Iphone 3', 8, 0, 8, N'HP-ENVY.jpg', 2, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (6, N'Laptop HP 2', CAST(2000000 AS Decimal(18, 0)), 10, N'Apple Iphone 5', 8, 0, 1, N'HP-14S.jpg', 2, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (7, N'Laptop HP 3', CAST(2000000 AS Decimal(18, 0)), 2, N'Apple Iphone 6', 8, 0, 1, N'HP-340S.jpg', 2, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (8, N'Laptop HP 4', CAST(1000000 AS Decimal(18, 0)), 1, N'SamSung GalaxyS1', 8, 0, 2, N'HP-PAVILION.jpg', 2, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (9, N'Laptop ASUS 2', CAST(1000000 AS Decimal(18, 0)), 1, N'SamSung GalaxyS2', 8, 0, 1, N'ASUS-A515EA.jpg', 6, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (10, N'Laptop ASUS 2', CAST(2000000 AS Decimal(18, 0)), 1, N'SamSung GalaxyS3', 8, 0, 2, N'ASUS-E210MA.jpg', 6, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (11, N'Laptop ASUS 3', CAST(2000000 AS Decimal(18, 0)), 2, N'SamSung GalaxyS4', 8, 0, 2, N'ASUS-X409FJ.jpg', 6, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (13, N'Laptop ASUS 4', CAST(200000 AS Decimal(18, 0)), 10, N'Xiaomi mi4', 8, 0, 4, N'ASUS-X501A.jpg', 6, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (14, N'Laptop Mac 1', CAST(2000000 AS Decimal(18, 0)), 10, N'Xiaomi mi5', 16, 0, 6, N'MACBOOK-14M1.jpg', 8, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (16, N'Laptop Mac 2', CAST(200000 AS Decimal(18, 0)), 10, N'Mi7', 8, 0, 2, N'MACBOOK-AIRM1.jpg', 8, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (19, N'Laptop Mac 3', CAST(1 AS Decimal(18, 0)), 12, N'123', 123, 1, 2, N'MACBOOK-MVFM.jpg', 8, 2)
+GO
+INSERT [dbo].[Sanpham] ([Masp], [Tensp], [Giatien], [Soluong], [Mota], [Bonhotrong], [Sanphammoi], [Ram], [Anhbia], [Mahang], [Mahdh]) VALUES (20, N'Laptop Mac 4', CAST(123 AS Decimal(18, 0)), 1223, N'123', 241, 1, 6, N'MACBOOK-MXK6.jpg', 8, 2)
+GO
+SET IDENTITY_INSERT [dbo].[Sanpham] OFF
+GO
+ALTER TABLE [dbo].[Nguoidung] ADD  CONSTRAINT [DF_Nguoidung_IDQuyen]  DEFAULT ((0)) FOR [IDQuyen]
+GO
+ALTER TABLE [dbo].[Chitietdonhang]  WITH CHECK ADD  CONSTRAINT [FK_Chitietdonhang_Donhang] FOREIGN KEY([Madon])
+REFERENCES [dbo].[Donhang] ([Madon])
+GO
+ALTER TABLE [dbo].[Chitietdonhang] CHECK CONSTRAINT [FK_Chitietdonhang_Donhang]
+GO
+ALTER TABLE [dbo].[Chitietdonhang]  WITH CHECK ADD  CONSTRAINT [FK_Chitietdonhang_Sanpham] FOREIGN KEY([Masp])
+REFERENCES [dbo].[Sanpham] ([Masp])
+GO
+ALTER TABLE [dbo].[Chitietdonhang] CHECK CONSTRAINT [FK_Chitietdonhang_Sanpham]
+GO
+ALTER TABLE [dbo].[Donhang]  WITH CHECK ADD  CONSTRAINT [FK_Donhang_Khachhang] FOREIGN KEY([MaNguoidung])
+REFERENCES [dbo].[Nguoidung] ([MaNguoiDung])
+GO
+ALTER TABLE [dbo].[Donhang] CHECK CONSTRAINT [FK_Donhang_Khachhang]
+GO
+ALTER TABLE [dbo].[Nguoidung]  WITH CHECK ADD  CONSTRAINT [FK_Nguoidung_Nguoidung] FOREIGN KEY([IDQuyen])
+REFERENCES [dbo].[PhanQuyen] ([IDQuyen])
+GO
+ALTER TABLE [dbo].[Nguoidung] CHECK CONSTRAINT [FK_Nguoidung_Nguoidung]
+GO
+ALTER TABLE [dbo].[Sanpham]  WITH CHECK ADD  CONSTRAINT [FK_Sanpham_Hangsanxuat] FOREIGN KEY([Mahang])
+REFERENCES [dbo].[Hangsanxuat] ([Mahang])
+GO
+ALTER TABLE [dbo].[Sanpham] CHECK CONSTRAINT [FK_Sanpham_Hangsanxuat]
+GO
+ALTER TABLE [dbo].[Sanpham]  WITH CHECK ADD  CONSTRAINT [FK_Sanpham_Hedieuhanh] FOREIGN KEY([Mahdh])
+REFERENCES [dbo].[Hedieuhanh] ([Mahdh])
+GO
+ALTER TABLE [dbo].[Sanpham] CHECK CONSTRAINT [FK_Sanpham_Hedieuhanh]
+GO

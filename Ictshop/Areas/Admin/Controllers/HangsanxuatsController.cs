@@ -12,7 +12,7 @@ namespace Ictshop.Areas.Admin.Controllers
 {
     public class HangsanxuatsController : Controller
     {
-        private Qlbanhang db = new Qlbanhang();
+        private LaptopStoreManegement db = new LaptopStoreManegement();
 
         // GET: Admin/Hangsanxuats
         public ActionResult Index()

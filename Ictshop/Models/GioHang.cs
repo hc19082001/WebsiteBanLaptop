@@ -14,7 +14,7 @@ namespace Ictshop.Models
         //    get { return iMaSP; }
         //    set { iMaSP = value; }
         //}
-        Qlbanhang db = new Qlbanhang();
+        LaptopStoreManegement db = new LaptopStoreManegement();
         public int iMasp { get; set; }
         public string sTensp { get; set; }
         public string sAnhBia { get; set; }

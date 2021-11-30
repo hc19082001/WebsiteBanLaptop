@@ -11,7 +11,7 @@ namespace Ictshop.Areas.Admin.Controllers
     public class HomeController : Controller
         
     {
-        Qlbanhang db = new Qlbanhang();
+        LaptopStoreManegement db = new LaptopStoreManegement();
        
         // GET: Admin/Home
         
@@ -105,7 +105,6 @@ namespace Ictshop.Areas.Admin.Controllers
                 oldItem.Anhbia = sanpham.Anhbia;
                 oldItem.Bonhotrong = sanpham.Bonhotrong;
                 oldItem.Ram = sanpham.Ram;
-                oldItem.Thesim = sanpham.Thesim;
                 oldItem.Mahang = sanpham.Mahang;
                 oldItem.Mahdh = sanpham.Mahdh;
                 // lưu lại
@@ -128,13 +127,15 @@ namespace Ictshop.Areas.Admin.Controllers
         }
 
         // Xoá sản phẩm phương thức POST: Admin/Home/Delete/5
+
+
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult DeleteItem(int ID)
         {
             try
             {
                 //Lấy được thông tin sản phẩm theo ID(mã sản phẩm)
-                var dt = db.Sanphams.Find(id);
+                var dt = db.Sanphams.Find(ID);
                 // Xoá
                 db.Sanphams.Remove(dt);
                 // Lưu lại
