@@ -40,6 +40,14 @@
     <Property Name="Tenhdh" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <NavigationProperty Name="Sanphams" Relationship="Self.FK_Sanpham_Hedieuhanh" FromRole="Hedieuhanh" ToRole="Sanpham" />
   </EntityType>
+  <EntityType Name="Loai">
+    <Key>
+      <PropertyRef Name="Maloai" />
+    </Key>
+    <Property Name="Maloai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sanphams" Relationship="LaptopStoreModel.LoaiSanpham" FromRole="Loai" ToRole="Sanpham" />
+  </EntityType>
   <EntityType Name="Nguoidung">
     <Key>
       <PropertyRef Name="MaNguoiDung" />
@@ -77,9 +85,11 @@
     <Property Name="Anhbia" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Mahang" Type="Int32" />
     <Property Name="Mahdh" Type="Int32" />
+    <Property Name="Maloai" Type="Int32" />
     <NavigationProperty Name="Chitietdonhangs" Relationship="Self.FK_Chitietdonhang_Sanpham" FromRole="Sanpham" ToRole="Chitietdonhang" />
     <NavigationProperty Name="Hangsanxuat" Relationship="Self.FK_Sanpham_Hangsanxuat" FromRole="Sanpham" ToRole="Hangsanxuat" />
     <NavigationProperty Name="Hedieuhanh" Relationship="Self.FK_Sanpham_Hedieuhanh" FromRole="Sanpham" ToRole="Hedieuhanh" />
+    <NavigationProperty Name="Loai" Relationship="LaptopStoreModel.LoaiSanpham" FromRole="Sanpham" ToRole="Loai" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -168,6 +178,7 @@
     <EntitySet Name="Donhangs" EntityType="Self.Donhang" />
     <EntitySet Name="Hangsanxuats" EntityType="Self.Hangsanxuat" />
     <EntitySet Name="Hedieuhanhs" EntityType="Self.Hedieuhanh" />
+    <EntitySet Name="Loais" EntityType="Self.Loai" />
     <EntitySet Name="Nguoidungs" EntityType="Self.Nguoidung" />
     <EntitySet Name="PhanQuyens" EntityType="Self.PhanQuyen" />
     <EntitySet Name="Sanphams" EntityType="Self.Sanpham" />
@@ -196,5 +207,21 @@
       <End Role="PhanQuyen" EntitySet="PhanQuyens" />
       <End Role="Nguoidung" EntitySet="Nguoidungs" />
     </AssociationSet>
+    <AssociationSet Name="LoaiSanpham" Association="LaptopStoreModel.LoaiSanpham">
+      <End Role="Loai" EntitySet="Loais" />
+      <End Role="Sanpham" EntitySet="Sanphams" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="LoaiSanpham">
+    <End Type="LaptopStoreModel.Loai" Role="Loai" Multiplicity="0..1" />
+    <End Type="LaptopStoreModel.Sanpham" Role="Sanpham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loai">
+        <PropertyRef Name="Maloai" />
+      </Principal>
+      <Dependent Role="Sanpham">
+        <PropertyRef Name="Maloai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
