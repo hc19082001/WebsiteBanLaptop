@@ -255,6 +255,9 @@
     <Content Include="HinhanhSP\ASUS-E210MA.jpg" />
     <Content Include="HinhanhSP\ASUS-X409FJ.jpg" />
     <Content Include="HinhanhSP\ASUS-X501A.jpg" />
+    <Content Include="HinhanhSP\AsusScar.jpg" />
+    <Content Include="HinhanhSP\AsusTuf.jpg" />
+    <Content Include="HinhanhSP\AsusZephyrus.jpg" />
     <Content Include="HinhanhSP\ban3.jpg" />
     <Content Include="HinhanhSP\baner-chinh-ultra.png" />
     <Content Include="HinhanhSP\BANNERCUOI.jpg" />
@@ -263,6 +266,8 @@
     <Content Include="HinhanhSP\galaxyflex.jpg" />
     <Content Include="HinhanhSP\galaxyodyssey.jpg" />
     <Content Include="HinhanhSP\galaxypro.jpg" />
+    <Content Include="HinhanhSP\HPVictus.jpg" />
+    <Content Include="HinhanhSP\HPPavilion.jpg" />
     <Content Include="HinhanhSP\LenIdeapad.jpg" />
     <Content Include="HinhanhSP\LenLegion.jpg" />
     <Content Include="HinhanhSP\LenThinkBook.jpg" />
@@ -275,9 +280,6 @@
     <Content Include="HinhanhSP\HP-14S.jpg" />
     <Content Include="HinhanhSP\HP-340S.jpg" />
     <Content Include="HinhanhSP\HP-ENVY.jpg" />
-    <Content Include="HinhanhSP\HP-PAVILION.jpg" />
-    <Content Include="HinhanhSP\hp-pivilion-gaming-15.jpg" />
-    <Content Include="HinhanhSP\HP-Victus.jpg" />
     <Content Include="HinhanhSP\LOGO.png" />
     <Content Include="HinhanhSP\ban1.jpg" />
     <Content Include="HinhanhSP\ban2.jpg" />
