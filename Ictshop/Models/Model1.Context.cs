@@ -29,6 +29,7 @@ namespace Ictshop.Models
         public virtual DbSet<Donhang> Donhangs { get; set; }
         public virtual DbSet<Hangsanxuat> Hangsanxuats { get; set; }
         public virtual DbSet<Hedieuhanh> Hedieuhanhs { get; set; }
+        public virtual DbSet<Loai> Loais { get; set; }
         public virtual DbSet<Nguoidung> Nguoidungs { get; set; }
         public virtual DbSet<PhanQuyen> PhanQuyens { get; set; }
         public virtual DbSet<Sanpham> Sanphams { get; set; }

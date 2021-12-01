@@ -31,10 +31,12 @@ namespace Ictshop.Models
         public string Anhbia { get; set; }
         public Nullable<int> Mahang { get; set; }
         public Nullable<int> Mahdh { get; set; }
+        public Nullable<int> Maloai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chitietdonhang> Chitietdonhangs { get; set; }
         public virtual Hangsanxuat Hangsanxuat { get; set; }
         public virtual Hedieuhanh Hedieuhanh { get; set; }
+        public virtual Loai Loai { get; set; }
     }
 }

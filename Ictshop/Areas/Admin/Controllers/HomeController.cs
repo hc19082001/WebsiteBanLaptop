@@ -54,6 +54,8 @@ namespace Ictshop.Areas.Admin.Controllers
             ViewBag.Mahang = hangselected;
             var hdhselected = new SelectList(db.Hedieuhanhs, "Mahdh", "Tenhdh");
             ViewBag.Mahdh = hdhselected;
+            var loaiselected = new SelectList(db.Loais, "Maloai", "TenLoai");
+            ViewBag.Maloai = loaiselected;
             return View();
         }
 
@@ -85,7 +87,9 @@ namespace Ictshop.Areas.Admin.Controllers
             ViewBag.Mahang = hangselected;
             var hdhselected = new SelectList(db.Hedieuhanhs, "Mahdh", "Tenhdh",dt.Mahdh);
             ViewBag.Mahdh = hdhselected;
-           // 
+            var loaiselected = new SelectList(db.Loais, "Maloai", "TenLoai");
+            ViewBag.Maloai = loaiselected;
+            // 
             return View(dt);
             
         }
@@ -107,6 +111,7 @@ namespace Ictshop.Areas.Admin.Controllers
                 oldItem.Ram = sanpham.Ram;
                 oldItem.Mahang = sanpham.Mahang;
                 oldItem.Mahdh = sanpham.Mahdh;
+                oldItem.Maloai = sanpham.Maloai; 
                 // lưu lại
                 db.SaveChanges();
                 // xong chuyển qua index
