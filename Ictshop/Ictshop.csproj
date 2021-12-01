@@ -431,6 +431,9 @@
     <Content Include="Views\Sanpham\lapSamSungpartial.cshtml" />
     <Content Include="Views\Sanpham\lapAcerpartial.cshtml" />
     <Content Include="Views\Sanpham\lapLenovopartial.cshtml" />
+    <Content Include="Views\Sanpham\showLapVanPhong.cshtml" />
+    <Content Include="Views\Sanpham\showLapGaming.cshtml" />
+    <Content Include="Views\Sanpham\showLapDoanhNhanh.cshtml" />
     <None Include="Web.Debug.Config">
       <DependentUpon>Web.Config</DependentUpon>
     </None>
