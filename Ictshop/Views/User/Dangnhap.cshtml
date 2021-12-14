@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Hãy đăng nhập để sử dụng đầy đủ tính năng của Website</h2>
+<h2 class="bg-info">Đăng nhập WEBSITE của chúng tôi để sử dụng các dịch vụ cần thiết</h2>
 
 @using (Html.BeginForm("Dangnhap", "User", FormMethod.Post))
 {
@@ -36,7 +36,3 @@
     </div>
 }
 @ViewBag.Fail
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

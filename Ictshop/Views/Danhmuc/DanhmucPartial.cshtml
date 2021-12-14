@@ -8,13 +8,41 @@
 
     <h3> DANH MỤC  </h3>
 
-    <div class="row">
+    <div class="row" id="my-dm">
 
         @foreach (var item in Model)
         {
-            <div class="col-lg-1">
-                <button class="success"><a href="#"> @item.Tenhang</a></button>
-            </div>
+        <div class="col-lg-1">
+
+            @if (item.Mahang == 2)
+            {
+                <button class="success"><a href="#hp"> @item.Tenhang</a></button>
+            }
+            else if (item.Mahang == 6)
+            {
+                <button class="success"><a href="#asus"> @item.Tenhang</a></button>
+            }
+            else if (item.Mahang == 7)
+            {
+                <button class="success"><a href="#msi"> @item.Tenhang</a></button>
+            }
+            else if (item.Mahang == 8)
+            {
+                <button class="success"><a href="#mac"> @item.Tenhang</a></button>
+            }
+            else if (item.Mahang == 9)
+            {
+                <button class="success"><a href="#lenovo"> @item.Tenhang</a></button>
+            }
+            else if (item.Mahang == 10)
+            {
+                <button class="success"><a href="#acer"> @item.Tenhang</a></button>
+            }
+            else if (item.Mahang == 11)
+            {
+                <button class="success"><a href="#ss"> @item.Tenhang</a></button>
+            }
+        </div>
         }
     </div>
 </div>
