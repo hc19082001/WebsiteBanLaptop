@@ -1,10 +1,18 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
     "\\Database",
     "\\Ictshop",
     "\\Ictshop\\App_Start"
   ],
   "SelectedNode": "\\Ictshop\\App_Start\\RouteConfig.cs",
+=======
+    "\\Ictshop",
+    "\\Ictshop\\Views",
+    "\\Ictshop\\Views\\Shared"
+  ],
+  "SelectedNode": "\\Ictshop\\Views\\Shared\\_Layout.cshtml",
+>>>>>>> 4dff01be08068b3bec09f6eec2b6bec18dfc4c1d
   "PreviewInSolutionExplorer": false
 }

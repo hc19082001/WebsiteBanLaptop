@@ -23,7 +23,6 @@
             background-color: #ff6a00;
             border-color: #ff6a00;
         }
-
         .top_header {
             background-color: darkslategrey;
             padding-left: 110px;
@@ -114,16 +113,10 @@
                     </div>
                 }
             }
+
             </div>
+
         </div>
-
-
-
-
-
-
-
-
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -131,7 +124,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="navbar-brand img-circle" src="~/HinhanhSP/LOGO.png" width="50" height="50"/>
+                <img class="navbar-brand img-circle" src="~/HinhanhSP/LOGO.png" width="50" height="50" style="padding:0" />
                 @Html.ActionLink("Laptop Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand"})
                 <form class="form-inline" style="float:left">
                     <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Search">
@@ -185,11 +178,11 @@
 
         </div>
         </div>
-
-
     <br>
 
     <div class="container body-content">
+
+
 
 
         @RenderBody()
@@ -197,7 +190,9 @@
 
         <hr />
         <div>
-            <img class="img-responsive" src="~/HinhanhSP/ban2.jpg" />
+            @*<img class="img-responsive" src="~/HinhanhSP/ban2.jpg" />*@
+            @*<img class="img-responsive" src="~/HinhanhSP/baner-chinh-ultra.png" />*@
+            <img class="img-responsive" src="~/HinhanhSP/BANNERCUOI.jpg" />
         </div>
         <br />
     </div>  
@@ -248,10 +243,8 @@
                 </div>
             </div>
             <hr />
-            <center> <p class="bg-primary">&copy; @DateTime.Now.Year - CườngIT</p></center>
+            <center> <p class="bg-primary">&copy; @DateTime.Now.Year - WELCOME TO LAP 555</p></center>
         </footer>
- 
-
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
