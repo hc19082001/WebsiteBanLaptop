@@ -152,5 +152,17 @@ namespace Ictshop.Areas.Admin.Controllers
                 return View();
             }
         }
+
+        public ActionResult DangXuat()
+        {
+            Session["use"] = null;
+            return RedirectToAction("Index", "Home", new {area = ""});
+        }
+
+        public ActionResult DieuHuong()
+        {
+            return RedirectToAction("Index", "Home", new { area = "" });
+
+        }
     }
 }

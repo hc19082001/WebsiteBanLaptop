@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="LaptopStoreModel.Donhang" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="LaptopStoreModel.Hangsanxuat" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="LaptopStoreModel.Hedieuhanh" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LaptopStoreModel.Loai" Width="1.5" PointX="5.625" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaptopStoreModel.Loai" Width="1.5" PointX="5.375" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="LaptopStoreModel.Nguoidung" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="LaptopStoreModel.PhanQuyen" Width="1.5" PointX="1.5" PointY="12.125" IsExpanded="true" />
         <EntityTypeShape EntityType="LaptopStoreModel.Sanpham" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />

@@ -51,6 +51,22 @@ namespace Ictshop.Controllers
             return PartialView(lenovo);
         }
 
+        public ActionResult showLapVanPhong()
+        {
+            var lapVP = db.Sanphams.Where(x => x.Maloai == 1).ToList();
+            return View(lapVP);
+        }
+        public ActionResult showLapGaming()
+        {
+            var lapGM = db.Sanphams.Where(x => x.Maloai == 2).ToList();
+            return View(lapGM);
+        }
+        public ActionResult showLapDoanhNhanh()
+        {
+            var lapDN = db.Sanphams.Where(x => x.Maloai == 3).ToList();
+            return View(lapDN);
+        }
+
         //public ActionResult dttheohang()
         //{
         //    var mi = db.Sanphams.Where(n => n.Mahang == 5).Take(4).ToList();
