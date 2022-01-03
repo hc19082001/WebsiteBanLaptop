@@ -55,7 +55,7 @@ namespace Ictshop.Controllers
 
             if (islogin != null)
                 {
-                    if (userMail == "Admin@gmail.com")
+                    if (islogin.IDQuyen == 2 )
                         {
                            Session["use"] = islogin;
                            return RedirectToAction("Index", "Admin/Home");
@@ -68,7 +68,7 @@ namespace Ictshop.Controllers
                  }
             else
                 {
-                    ViewBag.Fail = "Đăng nhập thất bại";
+                    ViewBag.Fail = "Sai tên tài khoản hoặc mặt khẩu !!! ";
                     return View("Dangnhap");
                 }
 
