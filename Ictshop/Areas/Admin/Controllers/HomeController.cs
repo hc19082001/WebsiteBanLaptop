@@ -61,21 +61,46 @@ namespace Ictshop.Areas.Admin.Controllers
 
         // Tạo sản phẩm mới phương thức POST: Admin/Home/Create
         [HttpPost]
-        public ActionResult Create(Sanpham sanpham)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Tensp, Giatien, Soluong, Mota, Bonhotrong, Sanphammoi, Ram, Mahang, Mahdh, Maloai")]   Sanpham sanpham)
         {
-            try
-            { 
-                //Thêm  sản phẩm mới
-                db.Sanphams.Add(sanpham);
-                // Lưu lại
-                db.SaveChanges();
-                // Thành công chuyển đến trang index
-                return RedirectToAction("Index");
-            }
-            catch
+            HttpPostedFileBase Image = Request.Files["Image"];
+
+            if (Image != null && Image.ContentLength > 0)
             {
-                return View();
+                byte[] imgbyte = new byte[Image.ContentLength];
+
+                Image.InputStream.Read(imgbyte, 0, Image.ContentLength);
+
+                String fileName = System.IO.Path.GetFileName(Image.FileName);
+                String urlFile = Server.MapPath("~/HinhanhSP/" + fileName);
+
+                Image.SaveAs(urlFile);
+
+                sanpham.Anhbia = fileName;
+
             }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    //Thêm  sản phẩm mới
+                    db.Sanphams.Add(sanpham);
+                    // Lưu lại
+                    db.SaveChanges();
+                    // Thành công chuyển đến trang index
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    return View();
+                }
+            }
+
+            return View();
+
+
         }
 
         // Sửa sản phẩm GET lấy ra ID sản phẩm: Admin/Home/Edit/5
@@ -96,31 +121,63 @@ namespace Ictshop.Areas.Admin.Controllers
 
         // POST: Admin/Home/Edit/5
         [HttpPost]
-        public ActionResult Edit(Sanpham sanpham)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit( Sanpham sanpham)
         {
-            try
+            var oldItem = db.Sanphams.Find(sanpham.Masp);
+            HttpPostedFileBase Image = Request.Files["Image"];
+
+            if (Image != null && Image.ContentLength > 0)
             {
-                // Sửa sản phẩm theo mã sản phẩm
-                var oldItem = db.Sanphams.Find(sanpham.Masp);
-                oldItem.Tensp = sanpham.Tensp;
-                oldItem.Giatien = sanpham.Giatien;
-                oldItem.Soluong = sanpham.Soluong;
-                oldItem.Mota = sanpham.Mota;
-                oldItem.Anhbia = sanpham.Anhbia;
-                oldItem.Bonhotrong = sanpham.Bonhotrong;
-                oldItem.Ram = sanpham.Ram;
-                oldItem.Mahang = sanpham.Mahang;
-                oldItem.Mahdh = sanpham.Mahdh;
-                oldItem.Maloai = sanpham.Maloai; 
-                // lưu lại
-                db.SaveChanges();
-                // xong chuyển qua index
-                return RedirectToAction("Index");
-            }
-            catch
+                byte[] imgbyte = new byte[Image.ContentLength];
+
+                Image.InputStream.Read(imgbyte, 0, Image.ContentLength);
+
+                String fileName = System.IO.Path.GetFileName(Image.FileName);
+                String urlFile = Server.MapPath("~/HinhanhSP/" + fileName);
+
+                Image.SaveAs(urlFile);
+
+                oldItem.Anhbia = fileName;
+
+            } 
+
+            oldItem.Tensp = sanpham.Tensp;
+
+            oldItem.Giatien = sanpham.Giatien;
+
+            oldItem.Soluong = sanpham.Soluong;
+
+            oldItem.Mota = sanpham.Mota;
+
+            oldItem.Bonhotrong = sanpham.Bonhotrong;
+
+            oldItem.Ram = sanpham.Ram;
+
+            oldItem.Mahang = sanpham.Mahang;
+
+            oldItem.Mahdh = sanpham.Mahdh;
+
+            oldItem.Maloai = sanpham.Maloai;
+
+            // lưu lại
+            db.SaveChanges();
+
+            if (ModelState.IsValid)
             {
-                return View();
+                try
+                {
+                    return RedirectToAction("Index");
+
+ 
+                }
+                catch
+                {
+                    return View();
+                }
             }
+            return View();
+
         }
 
         
